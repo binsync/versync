@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "versync"
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+]
+license = {text = "BSD 2 Clause"}
+description = "A Collaboration framework for binary analysis tasks."
+urls = {Homepage = "https://github.com/binsync/versync"}
+requires-python = ">= 3.8"
+dependencies = [
+    "libbs>=1.20.0"
+]
+dynamic = ["version"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.optional-dependencies]
+test = [
+    "flake8",
+    "pytest",
+]
+
+[project.scripts]
+versync = "versync.__main__:main"
+
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools.dynamic]
+version = {attr = "versync.__version__"}
