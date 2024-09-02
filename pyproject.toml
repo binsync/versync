@@ -7,14 +7,26 @@ name = "versync"
 classifiers = [
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.10",
 ]
 license = {text = "BSD 2 Clause"}
 description = "A Collaboration framework for binary analysis tasks."
 urls = {Homepage = "https://github.com/binsync/versync"}
-requires-python = ">= 3.8"
+requires-python = ">= 3.10"
 dependencies = [
-    "libbs>=1.20.0"
+    "libbs>=1.20.0",
+    "coloredlogs==15.0.1",
+    "dm-sonnet==1.34",
+    "MarkupSafe==2.0.0",
+    "networkx==2.5",
+    "pandas==1.3.5",
+    "scikit-learn==1.1.1",
+    "tensorflow-estimator==1.14.0",
+    "tensorflow-probability==0.7",
+    "tensorflow==1.14.0",
+    "tqdm==4.64.0",
+    "numpy==1.22.3",
+    "scipy==1.7.3"
 ]
 dynamic = ["version"]
 
